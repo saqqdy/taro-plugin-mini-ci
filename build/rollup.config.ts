@@ -7,6 +7,7 @@ import esbuild from 'rollup-plugin-esbuild'
 import replace from '@rollup/plugin-replace'
 import filesize from 'rollup-plugin-filesize'
 import { visualizer } from 'rollup-plugin-visualizer'
+import json from '@rollup/plugin-json'
 import { banner, extensions, reporter, version } from './config'
 
 export interface Config {
@@ -93,7 +94,8 @@ function createEntry(config: Config) {
 			__VERSION__: version
 		}),
 		nodeResolve(),
-		commonjs()
+		commonjs(),
+		json()
 	)
 
 	if (config.transpile !== false) {

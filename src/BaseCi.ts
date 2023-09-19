@@ -1,5 +1,5 @@
-import * as path from 'path'
-import * as process from 'process'
+import path from 'path'
+import process from 'process'
 
 import type { IPluginContext } from '@tarojs/service'
 import { ON_PREVIEW_COMPLETE, ON_UPLOAD_COMPLETE } from './hooks'
@@ -252,11 +252,11 @@ export default abstract class BaseCI {
 	abstract init(): void
 
 	/** 打开小程序项目 */
-	abstract open()
+	abstract open(): void
 
 	/** 上传小程序 */
-	abstract upload()
+	abstract upload(): void
 
 	/** 预览小程序 */
-	abstract preview()
+	abstract preview(): void
 }

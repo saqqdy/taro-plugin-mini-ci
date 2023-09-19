@@ -1,5 +1,5 @@
-import * as path from 'path'
-import * as minimist from 'minimist'
+import path from 'path'
+import minimist from 'minimist'
 
 import type { IPluginContext } from '@tarojs/service'
 import AlipayCI from './AlipayCI'

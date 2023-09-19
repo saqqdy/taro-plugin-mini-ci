@@ -9,14 +9,14 @@ import {
 } from './utils/qrcode'
 
 export default class JdCI extends BaseCI {
-	jdCi
+	jdCi: any
 	init() {
 		if (this.pluginOpts.jd == null) {
 			throw new Error('请为"@tarojs/plugin-mini-ci"插件配置 "jd" 选项')
 		}
 		try {
 			this.jdCi = getNpmPkgSync('jd-miniprogram-ci', process.cwd())
-		} catch (error) {
+		} catch (error: any) {
 			throw new Error('请安装依赖：jd-miniprogram-ci')
 		}
 	}
@@ -62,7 +62,7 @@ export default class JdCI extends BaseCI {
 					qrCodeLocalPath: previewQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			console.log(chalk.red(`预览失败 ${new Date().toLocaleString()} \n${error.message}`))
 			this.triggerPreviewHooks({
 				success: false,
@@ -112,7 +112,7 @@ export default class JdCI extends BaseCI {
 					qrCodeLocalPath: uploadQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			console.log(chalk.red(`上传失败 ${new Date().toLocaleString()} \n${error.message}`))
 			this.triggerUploadHooks({
 				success: false,

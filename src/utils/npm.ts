@@ -1,5 +1,5 @@
-const npmCached = {}
-export function resolveNpmSync(pluginName: string, root): string {
+const npmCached: Record<string, string> = {}
+export function resolveNpmSync(pluginName: string, root: string): string {
 	const resolvePath = require('resolve')
 	if (!npmCached[pluginName]) {
 		npmCached[pluginName] = resolvePath.sync(pluginName, { basedir: root })

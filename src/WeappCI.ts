@@ -1,6 +1,6 @@
-import * as crypto from 'crypto'
-import * as os from 'os'
-import * as path from 'path'
+import crypto from 'crypto'
+import os from 'os'
+import path from 'path'
 import * as ci from 'miniprogram-ci'
 import type { Project } from 'miniprogram-ci'
 import * as shell from 'shelljs'
@@ -127,7 +127,7 @@ export default class WeappCI extends BaseCI {
 					chalk.green(`开发版上传成功 ${new Date().toLocaleString()} ${extInfo}\n`)
 				)
 			}
-			let qrContent
+			let qrContent = ''
 			try {
 				qrContent = await readQrcodeImageContent(previewQrcodePath)
 				await printQrcode2Terminal(qrContent)
@@ -135,7 +135,7 @@ export default class WeappCI extends BaseCI {
 					processTypeEnum.REMIND,
 					`预览二维码已生成，存储在:"${previewQrcodePath}",二维码内容是：${qrContent}`
 				)
-			} catch (error) {
+			} catch (error: any) {
 				printLog(processTypeEnum.ERROR, chalk.red(`获取预览二维码失败：${error.message}`))
 			}
 
@@ -147,7 +147,7 @@ export default class WeappCI extends BaseCI {
 					qrCodeLocalPath: previewQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`上传失败 ${new Date().toLocaleString()} \n${error.message}`)
@@ -224,7 +224,7 @@ export default class WeappCI extends BaseCI {
 						qrCodeLocalPath: uploadQrcodePath
 					}
 				})
-			} catch (error) {
+			} catch (error: any) {
 				// 实际读取二维码时有极小概率会读取失败，待观察
 				printLog(processTypeEnum.ERROR, chalk.red(`体验二维码生成失败：${error.message}`))
 
@@ -238,7 +238,7 @@ export default class WeappCI extends BaseCI {
 					error
 				})
 			}
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`上传失败 ${new Date().toLocaleString()} \n${error.message}`)

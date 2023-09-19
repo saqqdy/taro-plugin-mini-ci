@@ -1,4 +1,4 @@
-import * as Jimp from 'jimp'
+import Jimp from 'jimp'
 import jsQR from 'jsqr'
 import * as QRCode from 'qrcode'
 

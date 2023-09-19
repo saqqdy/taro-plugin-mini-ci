@@ -1,4 +1,4 @@
-import * as path from 'path'
+import path from 'path'
 
 import BaseCI from './BaseCi'
 import type { TTInstance } from './types'
@@ -20,7 +20,7 @@ export default class TTCI extends BaseCI {
 		try {
 			// 调试使用版本是： tt-ide-cli@0.1.13
 			this.tt = getNpmPkgSync('tt-ide-cli', process.cwd())
-		} catch (error) {
+		} catch (error: any) {
 			printLog(processTypeEnum.ERROR, chalk.red('请安装依赖：tt-ide-cli'))
 			process.exit(1)
 		}
@@ -44,7 +44,7 @@ export default class TTCI extends BaseCI {
 				}
 			})
 			console.log(chalk.green(`打开IDE成功`))
-		} catch (error) {
+		} catch (error: any) {
 			printLog(processTypeEnum.ERROR, chalk.red('打开IDE失败', error))
 		}
 	}
@@ -88,7 +88,7 @@ export default class TTCI extends BaseCI {
 					qrCodeLocalPath: previewQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`上传失败 ${new Date().toLocaleString()} \n${error}`)
@@ -147,7 +147,7 @@ export default class TTCI extends BaseCI {
 					qrCodeLocalPath: uploadQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`上传失败 ${new Date().toLocaleString()} \n${error}`)

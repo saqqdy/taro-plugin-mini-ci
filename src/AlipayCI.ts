@@ -1,8 +1,8 @@
-import * as path from 'path'
-
+import path from 'path'
+import type { IVersionListResult } from 'minidev'
+import { compareVersion } from 'js-cool'
 import BaseCI from './BaseCi'
 import type { AlipayInstance } from './types'
-import { compareVersion } from './utils/compareVersion'
 import { getNpmPkgSync } from './utils/npm'
 import {
 	generateQrcodeImageFile,
@@ -74,7 +74,7 @@ export default class AlipayCI extends BaseCI {
 					devToolsInstallPath ? { appPath: devToolsInstallPath } : {}
 				)
 			)
-		} catch (error) {
+		} catch (error: any) {
 			printLog(processTypeEnum.ERROR, chalk.red(error.message))
 		}
 	}
@@ -110,7 +110,7 @@ export default class AlipayCI extends BaseCI {
 					qrCodeLocalPath: previewQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`预览上传失败 ${new Date().toLocaleString()} \n${error.message}`)
@@ -139,12 +139,16 @@ export default class AlipayCI extends BaseCI {
 				appId,
 				clientType
 			})
-			if (this.version && compareVersion(this.version, lasterVersion) <= 0) {
+			const versions = (await this.minidev.minidev.app.getUploadedVersionList({
+				appId,
+				clientType,
+				versionStatus: 'RELEASE'
+			})) as unknown as IVersionListResult[]
+			const releaseVersion = versions.length ? versions[0].appVersion : '0.0.0'
+			if (this.version && compareVersion(this.version, releaseVersion) <= 0) {
 				printLog(
 					processTypeEnum.ERROR,
-					chalk.red(
-						`上传版本号 "${this.version}" 必须大于最新上传版本 "${lasterVersion}"`
-					)
+					chalk.red(`上传版本号 "${this.version}" 必须大于生产版本 "${releaseVersion}"`)
 				)
 			}
 			const result = await this.minidev.minidev.upload({
@@ -175,7 +179,7 @@ export default class AlipayCI extends BaseCI {
 					qrCodeLocalPath: uploadQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`体验版上传失败 ${new Date().toLocaleString()} \n${error}`)

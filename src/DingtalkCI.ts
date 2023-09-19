@@ -1,5 +1,5 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import fs from 'fs'
+import path from 'path'
 
 import BaseCI from './BaseCi'
 import type { AlipayInstance, DingTalk } from './types'
@@ -70,7 +70,7 @@ export default class DingtalkCI extends BaseCI {
 					devToolsInstallPath ? { appPath: devToolsInstallPath } : {}
 				)
 			)
-		} catch (error) {
+		} catch (error: any) {
 			printLog(processTypeEnum.ERROR, chalk.red(error.message))
 		}
 	}
@@ -117,7 +117,7 @@ export default class DingtalkCI extends BaseCI {
 					qrCodeLocalPath: previewQrcodePath
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`预览失败 ${new Date().toLocaleString()} \n${error.message}`)
@@ -155,7 +155,6 @@ export default class DingtalkCI extends BaseCI {
 					console.log(info)
 					const { data = {} as any, status } = info
 					const logId = path.basename(data.logUrl || '')
-					// @ts-expect-error
 					const log = data.log
 
 					if (status === 'success') {
@@ -188,7 +187,7 @@ export default class DingtalkCI extends BaseCI {
 					qrCodeLocalPath: ''
 				}
 			})
-		} catch (error) {
+		} catch (error: any) {
 			printLog(
 				processTypeEnum.ERROR,
 				chalk.red(`体验版上传失败 ${new Date().toLocaleString()} \n${error.message}`)
