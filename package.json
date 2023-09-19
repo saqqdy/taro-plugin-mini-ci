@@ -1,0 +1,158 @@
+{
+	"name": "taro-plugin-mini-ci",
+	"description": "Taro 小程序端构建后支持CI（持续集成）的插件",
+	"version": "1.0.0-beta.1",
+	"packageManager": "pnpm@8.7.6",
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.esm-bundler.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"module": "./dist/index.esm-bundler.js",
+			"require": "./dist/index.cjs.js",
+			"import": "./dist/index.mjs"
+		},
+		"./*": "./*"
+	},
+	"directories": {
+		"dist": "dist",
+		"src": "src"
+	},
+	"files": [
+		"dist",
+		"typings"
+	],
+	"scripts": {
+		"build": "run-s clean build:{bundle,types} roll-types",
+		"build:bundle": "tscjs scripts/build",
+		"build:types": "tsc -p src/tsconfig.json",
+		"build:docs": "rm-all docs && typedoc && prettier --write \"**/*.md\"",
+		"deploy": "sh scripts/deploy.sh",
+		"roll-types": "api-extractor run && rm-all temp",
+		"watch": "pnpm build:bundle -w",
+		"pub": "tscjs scripts/publish",
+		"unpub": "tscjs scripts/unpublish",
+		"sync": "tscjs scripts/sync",
+		"workflow:publish-test": "zx scripts/workflow.mjs",
+		"clean": "rm-all dist es lib",
+		"dist": "run-s eslint prettier build",
+		"test-unit": "jest --filter ./scripts/filter-unit.js",
+		"jest": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
+		"coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+		"eslint": "eslint --fix .",
+		"prettier": "prettier --write \"**/*.{js,ts,jsx,tsx,yml,json,md}\""
+	},
+	"dependencies": {
+		"@tarojs/service": "*",
+		"debug": "^4.3.4",
+		"jimp": "^0.22.10",
+		"js-cool": "^5.8.1",
+		"jsqr": "^1.4.0",
+		"minimist": "^1.2.8",
+		"miniprogram-ci": "^1.9.8",
+		"qrcode": "^1.5.3",
+		"shelljs": "^0.8.5",
+		"tslib": "^2.6.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.22.20",
+		"@babel/preset-env": "^7.22.20",
+		"@babel/preset-typescript": "^7.22.15",
+		"@eslint-sets/eslint-config-ts": "^5.9.0",
+		"@microsoft/api-extractor": "^7.37.0",
+		"@node-kit/extra.fs": "^3.2.0",
+		"@rollup/plugin-babel": "^6.0.3",
+		"@rollup/plugin-commonjs": "^25.0.4",
+		"@rollup/plugin-node-resolve": "^15.2.1",
+		"@rollup/plugin-replace": "^5.0.2",
+		"@rollup/plugin-terser": "^0.4.3",
+		"@rollup/plugin-typescript": "^11.1.3",
+		"@types/jest": "^29.5.5",
+		"@types/node": "^20.6.2",
+		"@types/qrcode": "^1.5.2",
+		"@types/shelljs": "^0.8.12",
+		"babel-loader": "^9.1.3",
+		"chalk": "^5.3.0",
+		"core-js": "^3.32.2",
+		"coveralls": "^3.1.1",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.49.0",
+		"jest": "^29.7.0",
+		"load-yml": "^1.4.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^3.0.3",
+		"prettier-config-common": "^1.4.0",
+		"reinstaller": "^3.0.2",
+		"rm-all": "^1.1.1",
+		"rollup": "^3.29.2",
+		"rollup-plugin-esbuild": "^5.0.0",
+		"rollup-plugin-filesize": "^10.0.0",
+		"rollup-plugin-visualizer": "^5.9.2",
+		"ts-jest": "^29.1.1",
+		"tsnd": "^1.1.0",
+		"typedoc": "^0.25.1",
+		"typedoc-plugin-markdown": "^3.16.0",
+		"typescript": "^5.2.2",
+		"zx": "^7.2.3"
+	},
+	"peerDependencies": {
+		"dingtalk-miniapp-opensdk": "^1.0.7",
+		"jd-miniprogram-ci": "^1.0.2",
+		"minidev": "^1.5.1",
+		"tt-ide-cli": "^0.1.13"
+	},
+	"peerDependenciesMeta": {
+		"dingtalk-miniapp-opensdk": {
+			"optional": true
+		},
+		"minidev": {
+			"optional": true
+		},
+		"tt-ide-cli": {
+			"optional": true
+		},
+		"jd-miniprogram-ci": {
+			"optional": true
+		}
+	},
+	"engines": {
+		"node": ">=12.20"
+	},
+	"sideEffects": false,
+	"pnpm": {
+		"peerDependencyRules": {
+			"ignoreMissing": [
+				"tslib",
+				"webpack"
+			],
+			"allowedVersions": {
+				"rollup": ">=3.22.0",
+				"eslint": "^8.0.0"
+			}
+		}
+	},
+	"keywords": [
+		"CI/CD",
+		"taro",
+		"taro-plugin",
+		"tarojs",
+		"mini-ci",
+		"taro-plugin-mini-ci",
+		"saqqdy"
+	],
+	"license": "MIT",
+	"author": "saqqdy <https://github.com/saqqdy>",
+	"homepage": "https://github.com/saqqdy/taro-plugin-mini-ci#readme",
+	"bugs": {
+		"url": "https://github.com/saqqdy/taro-plugin-mini-ci/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/saqqdy/taro-plugin-mini-ci.git"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org",
+		"access": "public"
+	}
+}
