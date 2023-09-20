@@ -85,7 +85,23 @@ function createEntry(config: Config) {
 	}
 
 	if (!isGlobalBuild) {
-		_config.external.push('core-js', 'tslib', 'debug', 'js-cool')
+		_config.external.push(
+			'core-js',
+			'tslib',
+			'debug',
+			'js-cool',
+			'@tarojs/service',
+			'jimp',
+			'jsqr',
+			'minidev',
+			'minimist',
+			'miniprogram-ci',
+			'qrcode',
+			'shelljs',
+			'dingtalk-miniapp-opensdk',
+			'jd-miniprogram-ci',
+			'tt-ide-cli'
+		)
 	}
 
 	_config.plugins.push(
@@ -93,7 +109,7 @@ function createEntry(config: Config) {
 			preventAssignment: true,
 			__VERSION__: version
 		}),
-		nodeResolve(),
+		nodeResolve({ preferBuiltins: false }),
 		commonjs(),
 		json()
 	)

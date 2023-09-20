@@ -94,6 +94,8 @@ export interface AlipayConfig {
 	clientType?: AlipayClientType
 	/** 上传时想要删除的一个版本 */
 	deleteVersion?: string
+	/** 上传成功后，自动设置为 体验版本 (需要对应小程序的管理员权限) */
+	experience?: boolean
 }
 
 export type DingtalkProjectType =

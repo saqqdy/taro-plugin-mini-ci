@@ -1,6 +1,6 @@
 import path from 'path'
 import type { IVersionListResult } from 'minidev'
-import { compareVersion } from 'js-cool'
+import { compareVersion, awaitTo as to } from 'js-cool'
 import BaseCI from './BaseCi'
 import type { AlipayInstance } from './types'
 import { getNpmPkgSync } from './utils/npm'
@@ -130,7 +130,12 @@ export default class AlipayCI extends BaseCI {
 
 	async upload() {
 		const { chalk, printLog, processTypeEnum } = this.ctx.helper
-		const { clientType = 'alipay', appid: appId, deleteVersion } = this.pluginOpts.alipay!
+		const {
+			clientType = 'alipay',
+			appid: appId,
+			deleteVersion,
+			experience = false
+		} = this.pluginOpts.alipay!
 		printLog(processTypeEnum.START, '上传代码到阿里小程序后台', clientType)
 
 		//  SDK上传不支持设置描述信息; 版本号必须大于现有版本号
@@ -151,12 +156,21 @@ export default class AlipayCI extends BaseCI {
 					chalk.red(`上传版本号 "${this.version}" 必须大于生产版本 "${releaseVersion}"`)
 				)
 			}
+
+			experience &&
+				(await to(
+					this.minidev.minidev.app.cancelExperience({
+						appId,
+						version: deleteVersion || lasterVersion,
+						clientType
+					})
+				))
 			const result = await this.minidev.minidev.upload({
 				project: this.projectPath,
 				appId,
 				version: this.version,
 				clientType,
-				experience: true,
+				experience,
 				deleteVersion: deleteVersion || lasterVersion // 默认删除上个版本
 			})
 			/** 注意： 这是二维码的线上图片地址， 不是二维码中的内容 */
