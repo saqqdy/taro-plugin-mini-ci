@@ -105,7 +105,7 @@ const CIPluginFn = async () => {
       },
       jd: {
         privateKey: '京东小程序秘钥'
-      }
+      },
       // 版本号
       version: "1.0.0",
       // 版本发布描述
@@ -132,9 +132,9 @@ const config = {
     // 构建完后自动 “上传代码作为开发版并生成预览二维码”
     "build:weapp:preview": "taro build --type weapp --preview",
     // 构建完后自动“上传代码作为体验版”
-    "build:weapp:upload": "taro build --type weapp --upload",
+    "build:weapp:upload": "taro build --type weapp --upload"
     // 构建完后自动“上传 dist/xxx 目录的代码作为体验版”， `--projectPath` 参数 适用于 taro 和 原生混合的场景
-    "build:weapp:upload": "taro build --type weapp --upload --projectPath dist/xxx"
+    // "build:weapp:upload": "taro build --type weapp --upload --projectPath dist/xxx"
   },
   "taroConfig": {
     "version": "1.0.0",
