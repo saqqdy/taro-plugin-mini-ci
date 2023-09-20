@@ -1,7 +1,7 @@
 {
 	"name": "taro-plugin-mini-ci",
 	"description": "Taro 小程序端构建后支持CI（持续集成）的插件",
-	"version": "1.0.0-beta.1",
+	"version": "1.0.0",
 	"packageManager": "pnpm@8.7.6",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.esm-bundler.js",

@@ -13,7 +13,7 @@ export default class TTCI extends BaseCI {
 		if (this.pluginOpts.tt == null) {
 			printLog(
 				processTypeEnum.ERROR,
-				chalk.red('请为"@tarojs/plugin-mini-ci"插件配置 "tt" 选项')
+				chalk.red('请为"taro-plugin-mini-ci"插件配置 "tt" 选项')
 			)
 			process.exit(1)
 		}

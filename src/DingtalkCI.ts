@@ -16,7 +16,7 @@ export default class DingtalkCI extends BaseCI {
 
 	init(): void {
 		if (this.pluginOpts.dd == null) {
-			throw new Error('请为"@tarojs/plugin-mini-ci"插件配置 "dd" 选项')
+			throw new Error('请为"taro-plugin-mini-ci"插件配置 "dd" 选项')
 		}
 		const { printLog, processTypeEnum, chalk } = this.ctx.helper
 		const { token } = this.pluginOpts.dd!

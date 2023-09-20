@@ -2,7 +2,7 @@
 
 # taro-plugin-mini-ci
 
-Taro 小程序端构建后支持CI（持续集成）的插件，Fork自[@tarojs/plugin-mini-ci](https://github.com/NervJS/taro/tree/v3.6.16/packages/taro-plugin-mini-ci)
+Taro 小程序端构建后支持CI（持续集成）的插件，Fork自[@tarojs/plugin-mini-ci](https://github.com/NervJS/taro/tree/v3.6.16/packages/taro-plugin-mini-ci)，针对支付宝小程序CI做了流程优化
 
 [![NPM version][npm-image]][npm-url]
 [![Codacy Badge][codacy-image]][codacy-url]

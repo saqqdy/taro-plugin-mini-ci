@@ -16,7 +16,7 @@ export default class AlipayCI extends BaseCI {
 
 	init(): void {
 		if (this.pluginOpts.alipay == null) {
-			throw new Error('请为"@tarojs/plugin-mini-ci"插件配置 "alipay" 选项')
+			throw new Error('请为"taro-plugin-mini-ci"插件配置 "alipay" 选项')
 		}
 		const { fs, printLog, processTypeEnum, chalk } = this.ctx.helper
 		try {
@@ -134,7 +134,7 @@ export default class AlipayCI extends BaseCI {
 			clientType = 'alipay',
 			appid: appId,
 			deleteVersion,
-			experience = false
+			experience = true
 		} = this.pluginOpts.alipay!
 		printLog(processTypeEnum.START, '上传代码到阿里小程序后台', clientType)
 

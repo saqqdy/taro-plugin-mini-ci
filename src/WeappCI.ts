@@ -22,7 +22,7 @@ export default class WeappCI extends BaseCI {
 		const { appPath } = this.ctx.paths
 		const { fs } = this.ctx.helper
 		if (this.pluginOpts.weapp == null) {
-			throw new Error('请为"@tarojs/plugin-mini-ci"插件配置 "weapp" 选项')
+			throw new Error('请为"taro-plugin-mini-ci"插件配置 "weapp" 选项')
 		}
 		this.devToolsInstallPath =
 			this.pluginOpts.weapp.devToolsInstallPath ||

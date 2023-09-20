@@ -12,7 +12,7 @@ export default class JdCI extends BaseCI {
 	jdCi: any
 	init() {
 		if (this.pluginOpts.jd == null) {
-			throw new Error('请为"@tarojs/plugin-mini-ci"插件配置 "jd" 选项')
+			throw new Error('请为"taro-plugin-mini-ci"插件配置 "jd" 选项')
 		}
 		try {
 			this.jdCi = getNpmPkgSync('jd-miniprogram-ci', process.cwd())

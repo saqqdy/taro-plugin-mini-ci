@@ -186,7 +186,7 @@ export default (ctx: IPluginContext, _pluginOpts: CIOptions | (() => CIOptions))
 		if (!ci) {
 			printLog(
 				processTypeEnum.WARNING,
-				`"@tarojs/plugin-mini-ci" 插件暂时不支持 "${platform}" 平台`
+				`"taro-plugin-mini-ci" 插件暂时不支持 "${platform}" 平台`
 			)
 			return
 		}
