@@ -1,7 +1,7 @@
 import path from 'path'
 
 import BaseCI from './BaseCi'
-import type { TTInstance } from './types'
+import type { TTInstance } from './types.d'
 import { getNpmPkgSync } from './utils/npm'
 import { printQrcode2Terminal } from './utils/qrcode'
 
@@ -59,7 +59,7 @@ export default class TTCI extends BaseCI {
 				project: {
 					path: this.projectPath
 				},
-				// @ts-expect-error
+				// @ts-expect-error: 临时处理方案
 				page: {
 					path: ''
 				},

@@ -13,7 +13,7 @@ export async function readQrcodeImageContent(imagePath: string): Promise<string>
 				reject(err)
 				return
 			}
-			// @ts-expect-error
+			// @ts-expect-error: 临时处理方案
 			const scanData = jsQR(image.bitmap.data, image.bitmap.width, image.bitmap.height)
 
 			if (scanData) {

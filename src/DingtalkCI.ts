@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import BaseCI from './BaseCi'
-import type { AlipayInstance, DingTalk } from './types'
+import type { AlipayInstance, DingTalk } from './types.d'
 import { getNpmPkgSync } from './utils/npm'
 import { generateQrcodeImageFile } from './utils/qrcode'
 

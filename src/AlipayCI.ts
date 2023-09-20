@@ -2,7 +2,7 @@ import path from 'path'
 import type { IVersionListResult } from 'minidev'
 import { compareVersion, awaitTo as to } from 'js-cool'
 import BaseCI from './BaseCi'
-import type { AlipayInstance } from './types'
+import type { AlipayInstance } from './types.d'
 import { getNpmPkgSync } from './utils/npm'
 import {
 	generateQrcodeImageFile,

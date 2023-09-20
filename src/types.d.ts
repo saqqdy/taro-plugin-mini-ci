@@ -6,6 +6,7 @@ export interface AlipayInstance {
 	useDefaults: typeof useDefaults
 }
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type TTInstance = typeof TTInstance
 
 export module DingTalk {
@@ -42,6 +43,7 @@ export module DingTalk {
 			| 'RemoteBoatman'
 			| 'Publish'
 	}
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface MiniAppOpenSDK {
 		/** 配置 */
 		setConfig(config: IOpenSDKConfig)

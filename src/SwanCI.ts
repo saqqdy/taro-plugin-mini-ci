@@ -48,7 +48,7 @@ export default class SwanCI extends BaseCI {
 			async (_code, stdout, stderr) => {
 				if (!stderr) {
 					stdout = JSON.parse(stdout)
-					// @ts-expect-error
+					// @ts-expect-error: 临时处理方案
 					const qrContent = stdout.list[0].url
 					// console.log('预览图片：', stdout.list[0].urlBase64)
 					await printQrcode2Terminal(qrContent)
