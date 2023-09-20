@@ -1,0 +1,2335 @@
+{
+	"id": 0,
+	"name": "index.md",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 30,
+			"name": "AlipayConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "支付宝系列小程序配置"
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 31,
+					"name": "appid",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "小程序appid"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 84,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L84"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 36,
+					"name": "clientType",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "上传的终端, 默认alipay"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 94,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L94"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 29,
+						"name": "AlipayClientType",
+						"package": "taro-plugin-mini-ci"
+					}
+				},
+				{
+					"id": 37,
+					"name": "deleteVersion",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "上传时想要删除的一个版本"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 96,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L96"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 35,
+					"name": "devToolsInstallPath",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "小程序开发者工具安装路径"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 92,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L92"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 38,
+					"name": "experience",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "上传成功后，自动设置为 体验版本 (需要对应小程序的管理员权限)"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 98,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L98"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 34,
+					"name": "privateKey",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "私钥文本内容，在获取项目属性和上传时用于鉴权使用(privateKeyPath和privateKey之间必须要填写其中一个)"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 90,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L90"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 33,
+					"name": "privateKeyPath",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "私钥文件路径，在获取项目属性和上传时用于鉴权使用(privateKeyPath和privateKey之间必须要填写其中一个)"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 88,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L88"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 32,
+					"name": "toolId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "工具id"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 86,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L86"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						31,
+						36,
+						37,
+						35,
+						38,
+						34,
+						33,
+						32
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 82,
+					"character": 17,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L82"
+				}
+			]
+		},
+		{
+			"id": 53,
+			"name": "CIOptions",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 59,
+					"name": "alipay",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "支付宝系列小程序配置，官方文档地址： https://opendocs.alipay.com/mini/miniu/api"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 154,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L154"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 30,
+						"name": "AlipayConfig",
+						"package": "taro-plugin-mini-ci"
+					}
+				},
+				{
+					"id": 60,
+					"name": "dd",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "钉钉小程序配置"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 156,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L156"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 40,
+						"name": "DingtalkConfig",
+						"package": "taro-plugin-mini-ci"
+					}
+				},
+				{
+					"id": 55,
+					"name": "desc",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "版本发布描述， 默认取 package.json 文件的 taroConfig.desc 字段"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 146,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L146"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 62,
+					"name": "jd",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "京东小程序配置, 官方文档地址：https://mp-docs.jd.com/doc/dev/devtools/1597"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 160,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L160"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 49,
+						"name": "JdConfig",
+						"package": "taro-plugin-mini-ci"
+					}
+				},
+				{
+					"id": 56,
+					"name": "projectPath",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "目标项目目录，对所有小程序生效（不传默认取 outputRoot 字段 ）"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 148,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L148"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 61,
+					"name": "swan",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "百度小程序配置, 官方文档地址：https://smartprogram.baidu.com/docs/develop/devtools/smartapp_cli_function/"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 158,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L158"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 45,
+						"name": "SwanConfig",
+						"package": "taro-plugin-mini-ci"
+					}
+				},
+				{
+					"id": 58,
+					"name": "tt",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "头条小程序配置, 官方文档地址：https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/developer-instrument/development-assistance/ide-order-instrument"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 152,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L152"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 26,
+						"name": "TTConfig",
+						"package": "taro-plugin-mini-ci"
+					}
+				},
+				{
+					"id": 54,
+					"name": "version",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "发布版本号，默认取 package.json 文件的 taroConfig.version 字段"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 144,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L144"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 57,
+					"name": "weapp",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "微信小程序CI配置, 官方文档地址：https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 150,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L150"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 8,
+						"name": "WeappConfig",
+						"package": "taro-plugin-mini-ci"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						59,
+						60,
+						55,
+						62,
+						56,
+						61,
+						58,
+						54,
+						57
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 142,
+					"character": 17,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L142"
+				}
+			]
+		},
+		{
+			"id": 40,
+			"name": "DingtalkConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 41,
+					"name": "appid",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "钉钉小程序appid,即钉钉开放平台后台应用管理的 MiniAppId 选项（必填）"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 114,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L114"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 43,
+					"name": "devToolsInstallPath",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "小程序开发者工具安装路径"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 118,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L118"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 44,
+					"name": "projectType",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "钉钉应用类型， 默认为:'dingtalk-biz' (企业内部应用)"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 120,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L120"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 39,
+						"name": "DingtalkProjectType",
+						"package": "taro-plugin-mini-ci"
+					}
+				},
+				{
+					"id": 42,
+					"name": "token",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "令牌，从钉钉后台获取"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 116,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L116"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						41,
+						43,
+						44,
+						42
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 112,
+					"character": 17,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L112"
+				}
+			]
+		},
+		{
+			"id": 49,
+			"name": "JdConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 52,
+					"name": "ignores",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "指定需要排除的规则。无需配置以“.”开头的隐藏文件，它们将默认被忽略，如“.git”"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 139,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L139"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 50,
+					"name": "privateKey",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "秘钥信息"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 135,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L135"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 51,
+					"name": "robot",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "指定使用哪一个 ci 机器人，可选值：1 ~ 30"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 137,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L137"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						52,
+						50,
+						51
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 133,
+					"character": 17,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L133"
+				}
+			]
+		},
+		{
+			"id": 45,
+			"name": "SwanConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "百度小程序配置"
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 48,
+					"name": "devToolsInstallPath",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "小程序开发者工具安装路径"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 130,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L130"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 47,
+					"name": "minSwanVersion",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "最低基础库版本, 不传默认为 3.350.6"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 128,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L128"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 46,
+					"name": "token",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "有该小程序发布权限的登录密钥"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 126,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L126"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						48,
+						47,
+						46
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 124,
+					"character": 17,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L124"
+				}
+			]
+		},
+		{
+			"id": 26,
+			"name": "TTConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "头条小程序配置"
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 27,
+					"name": "email",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "绑定的邮箱账号"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 49,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L49"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 28,
+					"name": "password",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "密码"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 51,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L51"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						27,
+						28
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 47,
+					"character": 17,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L47"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "WeappConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "微信小程序配置"
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 9,
+					"name": "appid",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "小程序/小游戏项目的 appid"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 12,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L12"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 11,
+					"name": "devToolsInstallPath",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "微信开发者工具安装路径"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 16,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L16"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 13,
+					"name": "ignores",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "上传需要排除的目录"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 20,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L20"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 10,
+					"name": "privateKeyPath",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "私钥文件路径，在获取项目属性和上传时用于鉴权使用"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 14,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L14"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 14,
+					"name": "robot",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "指定使用哪一个 ci 机器人，可选值：1 ~ 30"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 22,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L22"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 15,
+					"name": "setting",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "预览和上传时的编译设置"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 24,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L24"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 16,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 25,
+									"name": "autoPrefixWXSS",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "对应于微信开发者工具的 \"上传时样式自动补全\""
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 42,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L42"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 24,
+									"name": "codeProtect",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "对应于微信开发者工具的 \"上传时进行代码保护\""
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 40,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L40"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 19,
+									"name": "disableUseStrict",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "\"增强编译\" 开启时，是否禁用JS文件严格模式，默认为false"
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 30,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L30"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 17,
+									"name": "es6",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "对应于微信开发者工具的 \"es6 转 es5\""
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 26,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L26"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 18,
+									"name": "es7",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "对应于微信开发者工具的 \"增强编译\""
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 28,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L28"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 23,
+									"name": "minify",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "上传时压缩所有代码，对应于微信开发者工具的 \"上传时压缩代码\""
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 38,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L38"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 20,
+									"name": "minifyJS",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "上传时压缩 JS 代码"
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 32,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L32"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 21,
+									"name": "minifyWXML",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "上传时压缩 WXML 代码"
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 34,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L34"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 22,
+									"name": "minifyWXSS",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "上传时压缩 WXSS 代码"
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "BaseCi.ts",
+											"line": 36,
+											"character": 2,
+											"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L36"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										25,
+										24,
+										19,
+										17,
+										18,
+										23,
+										20,
+										21,
+										22
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "BaseCi.ts",
+									"line": 24,
+									"character": 11,
+									"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L24"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 12,
+					"name": "type",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "类型，默认miniProgram 小程序"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "BaseCi.ts",
+							"line": 18,
+							"character": 1,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L18"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 7,
+						"name": "ProjectType",
+						"package": "taro-plugin-mini-ci"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						9,
+						11,
+						13,
+						10,
+						14,
+						15,
+						12
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 10,
+					"character": 17,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L10"
+				}
+			]
+		},
+		{
+			"id": 29,
+			"name": "AlipayClientType",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "终端类型"
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 55,
+					"character": 12,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L55"
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "literal",
+						"value": "alipay"
+					},
+					{
+						"type": "literal",
+						"value": "ampe"
+					},
+					{
+						"type": "literal",
+						"value": "amap"
+					},
+					{
+						"type": "literal",
+						"value": "genie"
+					},
+					{
+						"type": "literal",
+						"value": "alios"
+					},
+					{
+						"type": "literal",
+						"value": "uc"
+					},
+					{
+						"type": "literal",
+						"value": "quark"
+					},
+					{
+						"type": "literal",
+						"value": "koubei"
+					},
+					{
+						"type": "literal",
+						"value": "alipayiot"
+					},
+					{
+						"type": "literal",
+						"value": "cainiao"
+					},
+					{
+						"type": "literal",
+						"value": "alihealth"
+					},
+					{
+						"type": "literal",
+						"value": "health"
+					}
+				]
+			}
+		},
+		{
+			"id": 39,
+			"name": "DingtalkProjectType",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 101,
+					"character": 12,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L101"
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "literal",
+						"value": "dingtalk-personal"
+					},
+					{
+						"type": "literal",
+						"value": "dingtalk-biz-isv"
+					},
+					{
+						"type": "literal",
+						"value": "dingtalk-biz"
+					},
+					{
+						"type": "literal",
+						"value": "dingtalk-biz-custom"
+					},
+					{
+						"type": "literal",
+						"value": "dingtalk-biz-worktab-plugin"
+					}
+				]
+			}
+		},
+		{
+			"id": 7,
+			"name": "ProjectType",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "BaseCi.ts",
+					"line": 7,
+					"character": 12,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/BaseCi.ts#L7"
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "literal",
+						"value": "miniProgram"
+					},
+					{
+						"type": "literal",
+						"value": "miniGame"
+					},
+					{
+						"type": "literal",
+						"value": "miniProgramPlugin"
+					},
+					{
+						"type": "literal",
+						"value": "miniGamePlugin"
+					}
+				]
+			}
+		},
+		{
+			"id": 1,
+			"name": "default",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 36,
+					"character": 0,
+					"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/index.ts#L36"
+				}
+			],
+			"signatures": [
+				{
+					"id": 2,
+					"name": "default",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 36,
+							"character": 15,
+							"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/index.ts#L36"
+						}
+					],
+					"parameters": [
+						{
+							"id": 3,
+							"name": "ctx",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/@tarojs+service@3.6.16_postcss@8.4.30/node_modules/@tarojs/service/types/utils/types.d.ts",
+									"qualifiedName": "IPluginContext"
+								},
+								"name": "IPluginContext",
+								"package": "@tarojs/service"
+							}
+						},
+						{
+							"id": 4,
+							"name": "_pluginOpts",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"target": 53,
+										"name": "CIOptions",
+										"package": "taro-plugin-mini-ci"
+									},
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 5,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "index.ts",
+													"line": 36,
+													"character": 63,
+													"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/index.ts#L36"
+												}
+											],
+											"signatures": [
+												{
+													"id": 6,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "index.ts",
+															"line": 36,
+															"character": 63,
+															"url": "https://github.com/saqqdy/taro-plugin-mini-ci/blob/01f7c52/src/index.ts#L36"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": 53,
+														"name": "CIOptions",
+														"package": "taro-plugin-mini-ci"
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "void"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"children": [
+				30,
+				53,
+				40,
+				49,
+				45,
+				26,
+				8
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				29,
+				39,
+				7
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				1
+			]
+		}
+	],
+	"packageName": "taro-plugin-mini-ci",
+	"packageVersion": "1.0.0",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "<div style=\"text-align: center;\" align=\"center\">\n\n# taro-plugin-mini-ci\n\nTaro 小程序端构建后支持CI（持续集成）的插件，Fork自[@tarojs/plugin-mini-ci](https://github.com/NervJS/taro/tree/v3.6.16/packages/taro-plugin-mini-ci)，针对支付宝小程序CI做了流程优化\n\n[![NPM version][npm-image]][npm-url]\n[![Codacy Badge][codacy-image]][codacy-url]\n![typescript][typescript-url]\n[![Test coverage][codecov-image]][codecov-url]\n[![npm download][download-image]][download-url]\n[![License][license-image]][license-url]\n\n</div>\n\n<div style=\"text-align: center; margin-bottom: 20px;\" align=\"center\">\n\n### **[Documentation](https://www.saqqdy.com/taro-plugin-mini-ci)** • **[Change Log](./CHANGELOG.md)**\n\n</div>\n\n## Installation\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n# use pnpm\n$ pnpm i -D taro-plugin-mini-ci\n\n# use yarn\n$ yarn add -D taro-plugin-mini-ci\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### 使用插件\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "`/config/index.js`"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```js\n// 示例, 如果你使用 `vs code` 作为开发工具， 你还可以使用注释的语法引入插件包含的声明文件，可获得类似于typescript的友好提示\n/**\n * @typedef { import(\"taro-plugin-mini-ci\").CIOptions } CIOptions\n * @type {CIOptions}\n */\nconst CIPluginOpt = {\n  weapp: {\n    appid: '微信小程序appid',\n    privateKeyPath: '密钥文件相对项目根目录的相对路径，例如 key/private.appid.key'\n  },\n  tt: {\n    email: '字节小程序邮箱',\n    password: '字节小程序密码'\n  },\n  alipay: {\n    appid: '支付宝小程序appid',\n    toolId: '工具id',\n    privateKeyPath: '密钥文件相对项目根目录的相对路径，例如 key/pkcs8-private-pem'\n  },\n  dd: {\n    appid: '钉钉小程序appid,即钉钉开放平台后台应用管理的 MiniAppId 选项',\n    token: '令牌，从钉钉后台获取'\n  },\n  swan: {\n    token: '鉴权需要的token令牌'\n  },\n  jd: {\n    privateKey: '京东小程序秘钥'\n  },\n  // 版本号\n  version: '1.0.0',\n  // 版本发布描述\n  desc: '版本描述'\n}\nconst config = {\n  plugins: [['taro-plugin-mini-ci', CIPluginOpt]]\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n除了给插件传入对象， 你也可以传入一个异步函数，在编译时动态返回相关配置。\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```js\nconst CIPluginFn = async () => {\n  // 可以在这里做一些异步事情， 比如请求接口获取配置\n  /**\n   * @typedef { import(\"taroplugin-mini-ci\").CIOptions } CIOptions\n   * @type {CIOptions}\n   */\n  return {\n      weapp: {\n          appid: \"微信小程序appid\",\n          privateKeyPath: \"密钥文件相对项目根目录的相对路径，例如 key/private.appid.key\"\n      },\n      tt: {\n          email: \"字节小程序邮箱\",\n          password: \"字节小程序密码\"\n      },\n      alipay: {\n        appid: \"支付宝小程序appid\",\n        toolId: \"工具id\",\n        privateKeyPath: \"密钥文件相对项目根目录的相对路径，例如 key/pkcs8-private-pem\"\n      },\n      dd: {\n        appid: \"钉钉小程序appid,即钉钉开放平台后台应用管理的 MiniAppId 选项\",\n        token: \"令牌，从钉钉后台获取\"\n      },\n      swan: {\n        token: \"鉴权需要的token令牌\"\n      },\n      jd: {\n        privateKey: '京东小程序秘钥'\n      },\n      // 版本号\n      version: \"1.0.0\",\n      // 版本发布描述\n      desc: \"版本描述\"\n  }\n}\n\nconst config = {\n  plugins: [\n    [ \"taroplugin-mini-ci\", CIPluginFn ]\n  ]\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### 作为选项配合 build 命令使用\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "`package.json`"
+		},
+		{
+			"kind": "text",
+			"text": " 的 "
+		},
+		{
+			"kind": "code",
+			"text": "`scripts`"
+		},
+		{
+			"kind": "text",
+			"text": " 字段使用命令参数\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```json\n{\n  \"scripts\": {\n    // 构建完后自动 “打开开发者工具”\n    \"build:weapp\": \"taro build --type weapp --open\",\n    // 构建完后自动 “上传代码作为开发版并生成预览二维码”\n    \"build:weapp:preview\": \"taro build --type weapp --preview\",\n    // 构建完后自动“上传代码作为体验版”\n    \"build:weapp:upload\": \"taro build --type weapp --upload\"\n    // 构建完后自动“上传 dist/xxx 目录的代码作为体验版”， `--projectPath` 参数 适用于 taro 和 原生混合的场景\n    // \"build:weapp:upload\": \"taro build --type weapp --upload --projectPath dist/xxx\"\n  },\n  \"taroConfig\": {\n    \"version\": \"1.0.0\",\n    \"desc\": \"上传描述\"\n  }\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n由上面的示例可知，插件为 taro cli 命令扩展了 4 个选项：\n\n- --open\n  打开开发者工具，类似于网页开发中自动打开谷歌浏览器\n- --preview\n  上传代码作为开发版并生成预览二维码\n- --upload\n  上传代码作为体验版\n\n此 3 个选项在一条命令里不能同时使用（互斥）\n\n- --projectPath\n  指定要操作（打开、预览、上传）的目录路径， 默认情况下是操作构建后目录路径，即 [outputRoot 选项](https://taro-docs.jd.com/taro/docs/next/config-detail#outputroot)；\n\n此选项必须搭配上述三个选项之一一起使用；\n\n此选项优先级为： 终端传入的"
+		},
+		{
+			"kind": "code",
+			"text": "`--projectPath`"
+		},
+		{
+			"kind": "text",
+			"text": " > CI 配置的"
+		},
+		{
+			"kind": "code",
+			"text": "`projectPath`"
+		},
+		{
+			"kind": "text",
+			"text": " 选项 > [outputRoot 选项](https://taro-docs.jd.com/taro/docs/next/config-detail#outputroot)。\n\n### 作为命令单独使用\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```json\n{\n  \"scripts\": {\n    // 直接 “打开开发者工具并载入项目”\n    \"build:weapp\": \"taro open --type weapp  --projectPath dist/xxx\",\n    // 直接 “上传代码作为开发版并生成预览二维码”\n    \"build:weapp:preview\": \"taro preview --type weapp\",\n    // 直接“上传代码作为体验版”\n    \"build:weapp:upload\": \"taro upload --type weapp\",\n    // 上传指定目录代码作为体验版\n    \"build:weapp:upload2\": \"taro upload --type weapp --projectPath dist/xxx\"\n  },\n  \"taroConfig\": {\n    \"version\": \"1.0.0\",\n    \"desc\": \"上传描述\"\n  }\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n由上面的示例可知，插件额外新增了 3 个独立命令，让你可以直接操作指定目录。适用于把 "
+		},
+		{
+			"kind": "code",
+			"text": "`taro`"
+		},
+		{
+			"kind": "text",
+			"text": " 作为项目一部分的使用场景。\n\n当直接作为命令使用时，有两个选项：\n\n- --type\n  传入平台名称\n- --projectPath\n  传入路径。 此选项优先级为： 终端传入的"
+		},
+		{
+			"kind": "code",
+			"text": "`--projectPath`"
+		},
+		{
+			"kind": "text",
+			"text": " > CI 配置的"
+		},
+		{
+			"kind": "code",
+			"text": "`projectPath`"
+		},
+		{
+			"kind": "text",
+			"text": " 选项 > [outputRoot 选项](https://taro-docs.jd.com/taro/docs/next/config-detail#outputroot)\n\n### Hooks 使用\n\n在插件执行完 "
+		},
+		{
+			"kind": "code",
+			"text": "`预览`"
+		},
+		{
+			"kind": "text",
+			"text": "、"
+		},
+		{
+			"kind": "code",
+			"text": "`上传`"
+		},
+		{
+			"kind": "text",
+			"text": " 操作后， 插件会触发 2 个钩子事件：\n\n| 事件名            | 传递参数对象 | 说明              |\n| :---------------- | :----------- | :---------------- |\n| onPreviewComplete | 详细见下文   | CI 执行预览后触发 |\n| onUploadComplete  | 详细见下文   | CI 执行上传后触发 |\n\n两个钩子被触发时传入的数据对象描述如下\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\ninterface HooksData {\n  /** 是否预览、构建成功 */\n  success: boolean\n  data: {\n    /** 当前构建的小程序平台 */\n    platform: string\n    /** 预览码本地路径 */\n    qrCodeLocalPath: string\n    /** 预览码内容 */\n    qrCodeContent: string\n    /** 插件传递的预览版本号 */\n    version: string\n    /** 插件传递的描述文本 */\n    desc: string\n    /** 预览或上传的目录路径 */\n    projectPath: string\n  }\n  /** 错误对象 */\n  error?: Error\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n你可以写一个自定义插件，来接收上述 2 个事件传递的值：\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```js\n// config/test.js\nmodule.exports = function (ctx) {\n  ctx.register({\n    name: 'onPreviewComplete',\n    fn: ({ success, data, error }) => {\n      console.log('接收预览后数据', success, data, error)\n      // 你可以在这里发送钉钉或者飞书消息\n    }\n  })\n  ctx.register({\n    name: 'onUploadComplete',\n    fn: ({ success, data, error }) => {\n      console.log('接收上传后数据', success, data, error)\n      // 你可以在这里发送钉钉或者飞书消息\n    }\n  })\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n然后把自己写的插件配置应用起来：\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```js\n// config/index.js\nconst config = {\n  plugins: [\n    ['taroplugin-mini-ci', CI插件参数],\n    // 应用自己写的插件\n    require('path').join(__dirname, './test')\n  ],\n  ...其他配置省略\n}\n\nmodule.exports = function (merge) {\n  if (process.env.NODE_ENV === 'development') {\n    return merge({}, config, require('./dev'))\n  }\n  return merge({}, config, require('./prod'))\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### 各平台 支持的功能情况对比\n\n| 平台/功能 | 自动打开 IDE | 输出预览二维码 | 输出体验二维码 |\n| :-------- | :----------- | :------------- | :------------- |\n| weapp     | ✅           | ✅             | ✅             |\n| qywx      | ✅           | ✅             | ✅             |\n| tt        | ✅           | ✅             | ✅             |\n| alipay    | ✅           | ✅             | ✅             |\n| dd        | ✅           | ✅             | ❌             |\n| swan      | ✅           | ✅             | ✅             |\n| jd        | ❌           | ✅             | ✅             |\n\n> ps: 各平台上传都是支持的，只是不一定会输出二维码\n\n> 企业微信和微信的各项参数是一样的，共用一个配置\n\n## API\n\n### 插件配置\n\n| 参数        | 类型   | 说明                                                                                |\n| :---------- | :----- | :---------------------------------------------------------------------------------- |\n| weapp       | Object | （企业）微信小程序 CI 配置                                                          |\n| tt          | Object | 头条小程序配置                                                                      |\n| alipay      | Object | 支付宝小程序配置                                                                    |\n| dd          | Object | 钉钉小程序配置（3.6.0 版本开始支持）                                                |\n| swan        | Object | 百度小程序配置                                                                      |\n| version     | string | 上传版本号，不传时默认读取 package.json 下的 taroConfig 下的 version 字段           |\n| desc        | string | 上传时的描述信息，不传时默认读取 package.json 下的 taroConfig 下的 desc 字段        |\n| projectPath | string | 目标项目目录，对所有小程序生效（不传默认取 outputRoot 字段 ）（3.6.0 版本开始支持） |\n\n### （企业）微信小程序 CI 配置\n\n| 参数                | 类型     | 说明                                                                                     |\n| :------------------ | :------- | :--------------------------------------------------------------------------------------- |\n| appid               | string   | 小程序/小游戏项目的 appid                                                                |\n| privateKeyPath      | string   | 私钥文件在项目中的相对路径，在获取项目属性和上传时用于鉴权使用                           |\n| devToolsInstallPath | string   | 微信开发者工具安装路径，如果你安装微信开发者工具时选的默认路径，则不需要传入此参数(选填) |\n| projectPath         | string   | 上传的小程序的路径（默认取的 outputRoot ）（3.6.0 版本已废弃）                           |\n| ignores             | string[] | 上传需要排除的目录(选填)                                                                 |\n| robot               | number   | 指定使用哪一个 ci 机器人，可选值：1 ~ 30(选填, 3.6.0 版本开始支持)                       |\n| setting             | Object   | 预览和上传时的编译设置，具体见下表(选填, 3.6.2 版本开始支持)                             |\n\n#### 编译设置选项说明\n\n| 参数             | 类型    | 说明                                                        |\n| :--------------- | :------ | :---------------------------------------------------------- |\n| es6              | boolean | 对应于微信开发者工具的 \"es6 转 es5\"                         |\n| es7              | boolean | 对应于微信开发者工具的 \"增强编译\"                           |\n| disableUseStrict | boolean | \"增强编译\" 开启时，是否禁用 JS 文件严格模式，默认为 false   |\n| minifyJS         | boolean | 上传时压缩 JS 代码                                          |\n| minifyWXML       | boolean | 上传时压缩 WXML 代码                                        |\n| minifyWXSS       | boolean | 上传时压缩 WXSS 代码                                        |\n| minify           | boolean | 上传时压缩所有代码，对应于微信开发者工具的 \"上传时压缩代码\" |\n| codeProtect      | boolean | 对应于微信开发者工具的 \"上传时进行代码保护\"                 |\n| autoPrefixWXSS   | boolean | 对应于微信开发者工具的 \"上传时样式自动补全\"                 |\n\n官方 CI 文档[点这里](https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html)\n\n### 头条小程序 CI 配置\n\n| 参数     | 类型   | 说明           |\n| :------- | :----- | :------------- |\n| email    | string | 字节小程序邮箱 |\n| password | string | 字节小程序密码 |\n\n官方 CI 文档[点这里](https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/developer-instrument/development-assistance/ide-order-instrument)\n\n### 支付宝小程序 CI 配置\n\n| 参数                | 类型   | 说明                                                                                                                                                                                        |\n| :------------------ | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| appid               | string | 小程序 appid("
+		},
+		{
+			"kind": "code",
+			"text": "`3.6.0`"
+		},
+		{
+			"kind": "text",
+			"text": " 之前参数名是 "
+		},
+		{
+			"kind": "code",
+			"text": "`appId`"
+		},
+		{
+			"kind": "text",
+			"text": " ， "
+		},
+		{
+			"kind": "code",
+			"text": "`3.6.0`"
+		},
+		{
+			"kind": "text",
+			"text": " 开始统一成"
+		},
+		{
+			"kind": "code",
+			"text": "`appid`"
+		},
+		{
+			"kind": "text",
+			"text": ")                                                                                                                     |\n| toolId              | string | 工具 id，[查看这里复制](https://open.alipay.com/dev/workspace/key-manage/tool)                                                                                                              |\n| privateKeyPath      | string | 密钥文件相对项目根目录的相对路径, 私钥可通过[支付宝开放平台开发助手](https://opendocs.alipay.com/common/02kipl)生成                                                                         |\n| privateKey          | string | 私钥文本内容, 生成方式同上(privateKeyPath 和 privateKey 之间必须要填写其中一个； 3.6.0 版本开始支持)                                                                                        |\n| devToolsInstallPath | string | 小程序开发者工具安装路径(选填, 3.6.0 版本开始支持)                                                                                                                                          |\n| clientType          | string | 上传的终端,终端类型见下表（选填，默认值 alipay）                                                                                                                                            |\n| deleteVersion       | string | 在上传过程中删除指定的版本，即使该版本正在构建中或不存在。记录已上传的版本并使用这个参数能有效避免上传版本无法超过 20 个的问题（选填，默认自动删除上一个版本。可设置"
+		},
+		{
+			"kind": "code",
+			"text": "`0.0.0`"
+		},
+		{
+			"kind": "text",
+			"text": "，关闭自动删除） |\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```\n终端类型值及其含义：\n\nalipay: 支付宝\n\nampe：AMPE\n\namap：高德\n\ngenie：天猫精灵\n\nalios：ALIOS\n\nuc：UC\n\nquark：夸克\n\nkoubei：口碑\n\nalipayiot：IoT\n\ncainiao：菜鸟\n\nalihealth：阿里健康\n\nhealth:  阿里医院\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n官方 CI 文档[点这里](https://opendocs.alipay.com/mini/02q29z)\n\n### 钉钉小程序 CI 配置（3.6.0 版本开始支持）\n\n| 参数                | 类型   | 说明                                                                 |\n| :------------------ | :----- | :------------------------------------------------------------------- |\n| appid               | string | 钉钉小程序 appid,即钉钉开放平台后台应用管理的 MiniAppId 选项（必填） |\n| token               | string | 令牌，从钉钉后台获取 （必填）                                        |\n| devToolsInstallPath | string | 小程序开发者工具安装路径（选填）                                     |\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "`taro`"
+		},
+		{
+			"kind": "text",
+			"text": " 集成的钉钉 CI 使用了[钉钉官方仓库](https://github.com/open-dingtalk/dingtalk-design-cli)中的 "
+		},
+		{
+			"kind": "code",
+			"text": "`dingtalk-miniapp-opensdk`"
+		},
+		{
+			"kind": "text",
+			"text": " 包，查阅源码封装而成\n\n### 百度小程序 CI 配置\n\n| 参数           | 类型   | 说明                               |\n| :------------- | :----- | :--------------------------------- |\n| token          | string | 有该小程序发布权限的登录密钥       |\n| minSwanVersion | string | 最低基础库版本, 不传默认为 3.350.6 |\n\n官方 CI 文档[点这里](https://smartprogram.baidu.com/docs/develop/devtools/smartapp_cli_function/)\n\n### 京东小程序 CI 配置\n\n| 参数       | 类型     | 说明                                                                        |\n| :--------- | :------- | :-------------------------------------------------------------------------- |\n| privateKey | string   | 秘钥字符串                                                                  |\n| robot      | number   | 指定使用哪一个 ci 机器人，可选值：1 ~ 30                                    |\n| ignores    | string[] | 指定需要排除的规则。无需配置以“.”开头的隐藏文件，它们将默认被忽略，如“.git” |\n\n官方 CI 文档[点这里](https://mp-docs.jd.com/doc/dev/devtools/1597)\n\n### 完整 ts 接口描述\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nexport interface CIOptions {\n  /** 发布版本号，默认取 package.json 文件的 taroConfig.version 字段 */\n  version?: string\n  /** 版本发布描述， 默认取 package.json 文件的 taroConfig.desc 字段 */\n  desc?: string\n  /** 目标项目目录，对所有小程序生效（不传默认取 outputRoot 字段 ） */\n  projectPath?: string\n  /** 微信小程序CI配置, 官方文档地址：https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html */\n  weapp?: WeappConfig\n  /** 头条小程序配置, 官方文档地址：https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/developer-instrument/development-assistance/ide-order-instrument */\n  tt?: TTConfig\n  /** 支付宝系列小程序配置，官方文档地址： https://opendocs.alipay.com/mini/miniu/api */\n  alipay?: AlipayConfig\n  /** 钉钉小程序配置 */\n  dd?: DingtalkConfig\n  /** 百度小程序配置, 官方文档地址：https://smartprogram.baidu.com/docs/develop/devtools/commandtool/ */\n  swan?: SwanConfig\n  /** 京东小程序配置, 官方文档地址：https://mp-docs.jd.com/doc/dev/devtools/1597 */\n  jd?: JdConfig\n}\n\nexport type ProjectType = 'miniProgram' | 'miniGame' | 'miniProgramPlugin' | 'miniGamePlugin'\n\n/** 微信小程序配置 */\nexport interface WeappConfig {\n  /** 小程序/小游戏项目的 appid */\n  appid: string\n  /** 私钥文件路径，在获取项目属性和上传时用于鉴权使用 */\n  privateKeyPath: string\n  /** 微信开发者工具安装路径 */\n  devToolsInstallPath?: string\n  /** 类型，默认miniProgram 小程序 */\n  type?: ProjectType\n  /** 上传需要排除的目录 */\n  ignores?: Array<string>\n  /** 指定使用哪一个 ci 机器人，可选值：1 ~ 30 */\n  robot?: number\n  /** 预览和上传时的编译设置 */\n  setting?: {\n    /** 对应于微信开发者工具的 \"es6 转 es5\" */\n    es6: boolean\n    /** 对应于微信开发者工具的 \"增强编译\" */\n    es7: boolean\n    /** \"增强编译\" 开启时，是否禁用JS文件严格模式，默认为false */\n    disableUseStrict: boolean\n    /** 上传时压缩 JS 代码 */\n    minifyJS: boolean\n    /** 上传时压缩 WXML 代码 */\n    minifyWXML: boolean\n    /** 上传时压缩 WXSS 代码 */\n    minifyWXSS: boolean\n    /** 上传时压缩所有代码，对应于微信开发者工具的 \"上传时压缩代码\" */\n    minify: boolean\n    /** 对应于微信开发者工具的 \"上传时进行代码保护\" */\n    codeProtect: boolean\n    /** 对应于微信开发者工具的 \"上传时样式自动补全\" */\n    autoPrefixWXSS: boolean\n  }\n}\n\n/** 头条小程序配置 */\nexport interface TTConfig {\n  /** 绑定的邮箱账号 */\n  email: string\n  /** 密码 */\n  password: string\n}\n\n/** 终端类型 */\nexport type AlipayClientType =\n  /** 支付宝 */\n  | 'alipay'\n  /** AMPE */\n  | 'ampe'\n  /** 高德 */\n  | 'amap'\n  /** 天猫精灵 */\n  | 'genie'\n  /** ALIOS */\n  | 'alios'\n  /** UC */\n  | 'uc'\n  /** 夸克 */\n  | 'quark'\n  /** 口碑 */\n  | 'koubei'\n  /** loT */\n  | 'alipayiot'\n  /** 菜鸟 */\n  | 'cainiao'\n  /** 阿里健康(医蝶谷) */\n  | 'alihealth'\n  /** 阿里医院 */\n  | 'health'\n\n/** 支付宝系列小程序配置 */\nexport interface AlipayConfig {\n  /** 小程序appid */\n  appid: string\n  /** 工具id */\n  toolId: string\n  /** 私钥文件路径，在获取项目属性和上传时用于鉴权使用(privateKeyPath和privateKey之间必须要填写其中一个) */\n  privateKeyPath: string\n  /** 私钥文本内容，在获取项目属性和上传时用于鉴权使用(privateKeyPath和privateKey之间必须要填写其中一个) */\n  privateKey: string\n  /** 小程序开发者工具安装路径 */\n  devToolsInstallPath?: string\n  /** 上传的终端, 默认alipay */\n  clientType?: AlipayClientType\n}\n\nexport type DingtalkProjectType =\n  /** 第三方个人应用 */\n  | 'dingtalk-personal'\n  /** 第三方企业应用 */\n  | 'dingtalk-biz-isv'\n  /** 企业内部应用 */\n  | 'dingtalk-biz'\n  /** 企业定制应用 */\n  | 'dingtalk-biz-custom'\n  /** 工作台组件 */\n  | 'dingtalk-biz-worktab-plugin'\nexport interface DingtalkConfig {\n  /** 钉钉小程序appid,即钉钉开放平台后台应用管理的 MiniAppId 选项（必填） */\n  appid: string\n  /** 令牌，从钉钉后台获取 */\n  token: string\n  /** 小程序开发者工具安装路径 */\n  devToolsInstallPath?: string\n  /** 钉钉应用类型， 默认为:'dingtalk-biz' (企业内部应用) */\n  projectType?: DingtalkProjectType\n}\n\n/** 百度小程序配置 */\nexport interface SwanConfig {\n  /** 有该小程序发布权限的登录密钥 */\n  token: string\n  /** 最低基础库版本, 不传默认为 3.350.6 */\n  minSwanVersion?: string\n}\n\n/** 京东小程序配置 */\nexport interface JdConfig {\n  /** 秘钥信息 */\n  privateKey: string\n  /** 指定使用哪一个 ci 机器人，可选值：1 ~ 30 */\n  robot?: number\n  /** 指定需要排除的规则。无需配置以“.”开头的隐藏文件，它们将默认被忽略，如“.git” */\n  ignores?: string[]\n}\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## Support & Issues\n\nPlease open an issue [here](https://github.com/saqqdy/taro-plugin-mini-ci/issues).\n\n## License\n\n[MIT](LICENSE)\n\n[npm-image]: https://img.shields.io/npm/v/taro-plugin-mini-ci.svg?style=flat-square\n[npm-url]: https://npmjs.org/package/taro-plugin-mini-ci\n[codacy-image]: https://app.codacy.com/project/badge/Grade/f70d4880e4ad4f40aa970eb9ee9d0696\n[codacy-url]: https://www.codacy.com/gh/saqqdy/taro-plugin-mini-ci/dashboard?utm_source=github.com&utm_medium=referral&utm_content=saqqdy/taro-plugin-mini-ci&utm_campaign=Badge_Grade\n[typescript-url]: https://badgen.net/badge/icon/typescript?icon=typescript&label\n[codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/taro-plugin-mini-ci.svg?style=flat-square\n[codecov-url]: https://codecov.io/github/saqqdy/taro-plugin-mini-ci?branch=master\n[download-image]: https://img.shields.io/npm/dm/taro-plugin-mini-ci.svg?style=flat-square\n[download-url]: https://npmjs.org/package/taro-plugin-mini-ci\n[license-image]: https://img.shields.io/badge/License-MIT-blue.svg\n[license-url]: LICENSE"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "default"
+		},
+		"2": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "default"
+		},
+		"3": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "ctx"
+		},
+		"4": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "_pluginOpts"
+		},
+		"5": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__type"
+		},
+		"6": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "__type"
+		},
+		"7": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "ProjectType"
+		},
+		"8": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig"
+		},
+		"9": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig.appid"
+		},
+		"10": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig.privateKeyPath"
+		},
+		"11": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig.devToolsInstallPath"
+		},
+		"12": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig.type"
+		},
+		"13": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig.ignores"
+		},
+		"14": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig.robot"
+		},
+		"15": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "WeappConfig.setting"
+		},
+		"16": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type"
+		},
+		"17": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.es6"
+		},
+		"18": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.es7"
+		},
+		"19": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.disableUseStrict"
+		},
+		"20": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.minifyJS"
+		},
+		"21": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.minifyWXML"
+		},
+		"22": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.minifyWXSS"
+		},
+		"23": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.minify"
+		},
+		"24": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.codeProtect"
+		},
+		"25": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "__type.autoPrefixWXSS"
+		},
+		"26": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "TTConfig"
+		},
+		"27": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "TTConfig.email"
+		},
+		"28": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "TTConfig.password"
+		},
+		"29": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayClientType"
+		},
+		"30": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig"
+		},
+		"31": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.appid"
+		},
+		"32": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.toolId"
+		},
+		"33": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.privateKeyPath"
+		},
+		"34": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.privateKey"
+		},
+		"35": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.devToolsInstallPath"
+		},
+		"36": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.clientType"
+		},
+		"37": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.deleteVersion"
+		},
+		"38": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "AlipayConfig.experience"
+		},
+		"39": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "DingtalkProjectType"
+		},
+		"40": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "DingtalkConfig"
+		},
+		"41": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "DingtalkConfig.appid"
+		},
+		"42": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "DingtalkConfig.token"
+		},
+		"43": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "DingtalkConfig.devToolsInstallPath"
+		},
+		"44": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "DingtalkConfig.projectType"
+		},
+		"45": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "SwanConfig"
+		},
+		"46": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "SwanConfig.token"
+		},
+		"47": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "SwanConfig.minSwanVersion"
+		},
+		"48": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "SwanConfig.devToolsInstallPath"
+		},
+		"49": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "JdConfig"
+		},
+		"50": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "JdConfig.privateKey"
+		},
+		"51": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "JdConfig.robot"
+		},
+		"52": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "JdConfig.ignores"
+		},
+		"53": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions"
+		},
+		"54": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.version"
+		},
+		"55": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.desc"
+		},
+		"56": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.projectPath"
+		},
+		"57": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.weapp"
+		},
+		"58": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.tt"
+		},
+		"59": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.alipay"
+		},
+		"60": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.dd"
+		},
+		"61": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.swan"
+		},
+		"62": {
+			"sourceFileName": "src/BaseCi.ts",
+			"qualifiedName": "CIOptions.jd"
+		}
+	}
+}
