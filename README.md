@@ -83,40 +83,38 @@ const CIPluginFn = async () => {
    * @type {CIOptions}
    */
   return {
-      weapp: {
-          appid: "微信小程序appid",
-          privateKeyPath: "密钥文件相对项目根目录的相对路径，例如 key/private.appid.key"
-      },
-      tt: {
-          email: "字节小程序邮箱",
-          password: "字节小程序密码"
-      },
-      alipay: {
-        appid: "支付宝小程序appid",
-        toolId: "工具id",
-        privateKeyPath: "密钥文件相对项目根目录的相对路径，例如 key/pkcs8-private-pem"
-      },
-      dd: {
-        appid: "钉钉小程序appid,即钉钉开放平台后台应用管理的 MiniAppId 选项",
-        token: "令牌，从钉钉后台获取"
-      },
-      swan: {
-        token: "鉴权需要的token令牌"
-      },
-      jd: {
-        privateKey: '京东小程序秘钥'
-      },
-      // 版本号
-      version: "1.0.0",
-      // 版本发布描述
-      desc: "版本描述"
+    weapp: {
+      appid: '微信小程序appid',
+      privateKeyPath: '密钥文件相对项目根目录的相对路径，例如 key/private.appid.key'
+    },
+    tt: {
+      email: '字节小程序邮箱',
+      password: '字节小程序密码'
+    },
+    alipay: {
+      appid: '支付宝小程序appid',
+      toolId: '工具id',
+      privateKeyPath: '密钥文件相对项目根目录的相对路径，例如 key/pkcs8-private-pem'
+    },
+    dd: {
+      appid: '钉钉小程序appid,即钉钉开放平台后台应用管理的 MiniAppId 选项',
+      token: '令牌，从钉钉后台获取'
+    },
+    swan: {
+      token: '鉴权需要的token令牌'
+    },
+    jd: {
+      privateKey: '京东小程序秘钥'
+    },
+    // 版本号
+    version: '1.0.0',
+    // 版本发布描述
+    desc: '版本描述'
   }
 }
 
 const config = {
-  plugins: [
-    [ "taroplugin-mini-ci", CIPluginFn ]
-  ]
+  plugins: [['taroplugin-mini-ci', CIPluginFn]]
 }
 ```
 
@@ -519,6 +517,8 @@ export interface AlipayConfig {
   devToolsInstallPath?: string
   /** 上传的终端, 默认alipay */
   clientType?: AlipayClientType
+  /** 上传成功后，自动设置为 体验版本 (需要对应小程序的管理员权限) */
+  experience?: boolean
 }
 
 export type DingtalkProjectType =
