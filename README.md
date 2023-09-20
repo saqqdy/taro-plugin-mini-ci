@@ -12,8 +12,6 @@ Taro 小程序端构建后支持CI（持续集成）的插件，Fork自[@tarojs/
 [![npm download][download-image]][download-url]
 [![License][license-image]][license-url]
 
-[![Sonar][sonar-image]][sonar-url]
-
 </div>
 
 <div style="text-align: center; margin-bottom: 20px;" align="center">
@@ -586,5 +584,3 @@ Please open an issue [here](https://github.com/saqqdy/taro-plugin-mini-ci/issues
 [download-url]: https://npmjs.org/package/taro-plugin-mini-ci
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
-[sonar-image]: https://sonarcloud.io/api/project_badges/quality_gate?project=saqqdy_taro-plugin-mini-ci
-[sonar-url]: https://sonarcloud.io/dashboard?id=saqqdy_taro-plugin-mini-ci
