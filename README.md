@@ -6,7 +6,6 @@ Taro 小程序端构建后支持CI（持续集成）的插件，Fork自[@tarojs/
 
 [![NPM version][npm-image]][npm-url]
 [![Codacy Badge][codacy-image]][codacy-url]
-[![tree shaking][tree-shaking-image]][tree-shaking-url]
 ![typescript][typescript-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![npm download][download-image]][download-url]
@@ -575,8 +574,6 @@ Please open an issue [here](https://github.com/saqqdy/taro-plugin-mini-ci/issues
 [npm-url]: https://npmjs.org/package/taro-plugin-mini-ci
 [codacy-image]: https://app.codacy.com/project/badge/Grade/f70d4880e4ad4f40aa970eb9ee9d0696
 [codacy-url]: https://www.codacy.com/gh/saqqdy/taro-plugin-mini-ci/dashboard?utm_source=github.com&utm_medium=referral&utm_content=saqqdy/taro-plugin-mini-ci&utm_campaign=Badge_Grade
-[tree-shaking-image]: https://badgen.net/bundlephobia/tree-shaking/taro-plugin-mini-ci
-[tree-shaking-url]: https://bundlephobia.com/package/taro-plugin-mini-ci
 [typescript-url]: https://badgen.net/badge/icon/typescript?icon=typescript&label
 [codecov-image]: https://img.shields.io/codecov/c/github/saqqdy/taro-plugin-mini-ci.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/saqqdy/taro-plugin-mini-ci?branch=master
