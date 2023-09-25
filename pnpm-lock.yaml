@@ -21,8 +21,8 @@ dependencies:
     specifier: ^0.22.10
     version: 0.22.10
   js-cool:
-    specifier: ^5.8.1
-    version: 5.8.1
+    specifier: ^5.10.0
+    version: 5.10.0
   jsqr:
     specifier: ^1.4.0
     version: 1.4.0
@@ -135,10 +135,10 @@ devDependencies:
     version: 1.4.0
   reinstaller:
     specifier: ^3.0.2
-    version: 3.0.2(debug@4.3.4)(js-cool@5.8.1)
+    version: 3.0.2(debug@4.3.4)(js-cool@5.10.0)
   rm-all:
     specifier: ^1.1.1
-    version: 1.1.1(js-cool@5.8.1)
+    version: 1.1.1(js-cool@5.10.0)
   rollup:
     specifier: ^3.29.2
     version: 3.29.2
@@ -12077,8 +12077,8 @@ packages:
     resolution: {integrity: sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ==}
     dev: false
 
-  /js-cool@5.8.1:
-    resolution: {integrity: sha512-xYJcQGpEoLSwDKnqxjOhCoQX9EF+3cSNsuGqUF2KW7bDuoOJrn4RO1TKYZEw0793CEooMWnS3VP2vIkQRfr6IQ==}
+  /js-cool@5.10.0:
+    resolution: {integrity: sha512-JlJE2s7JrvlLOilVs66fbyKIGLOrUW7wSqhiJPsqJRFIyhpn484shYbjliGR1PRsimV7A14NdK6GVGhbO8p2xg==}
     engines: {node: '>=12.20'}
     dependencies:
       load-source: 1.2.0
@@ -14907,7 +14907,7 @@ packages:
     dependencies:
       jsesc: 0.5.0
 
-  /reinstaller@3.0.2(debug@4.3.4)(js-cool@5.8.1):
+  /reinstaller@3.0.2(debug@4.3.4)(js-cool@5.10.0):
     resolution: {integrity: sha512-VLjzE9tQMghK53x1Ccx96AEdRRe+dKq5zsnSNFLf1d7QsLAaRV0yX3lU1djgIaPYNSjDOXBRXjt8Y/GFTrHt/A==}
     hasBin: true
     peerDependencies:
@@ -14921,7 +14921,7 @@ packages:
       cosmiconfig: 8.2.0
       debug: 4.3.4
       global-modules: 2.0.0
-      js-cool: 5.8.1
+      js-cool: 5.10.0
       monorepo-root: 2.5.1
       ora: 6.3.1
       what-pm: 2.5.1
@@ -15120,7 +15120,7 @@ packages:
     dependencies:
       glob: 7.2.3
 
-  /rm-all@1.1.1(js-cool@5.8.1):
+  /rm-all@1.1.1(js-cool@5.10.0):
     resolution: {integrity: sha512-5n3SiDtp0BxHX485YhfbxR1RLtR9KlRTCj0hHahTufYEhUyE9ydy1nRtP4OG9kXifsYClu43gwkqcOnjpz/HPQ==}
     engines: {node: '>=12.20'}
     hasBin: true
@@ -15129,7 +15129,7 @@ packages:
     dependencies:
       '@node-kit/extra.fs': 3.2.0
       commander: 11.0.0
-      js-cool: 5.8.1
+      js-cool: 5.10.0
     dev: true
 
   /rollup-plugin-esbuild@5.0.0(esbuild@0.18.8)(rollup@3.29.2):

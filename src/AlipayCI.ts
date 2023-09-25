@@ -1,6 +1,6 @@
 import path from 'path'
 import type { IVersionListResult } from 'minidev'
-import { compareVersion, awaitTo as to } from 'js-cool'
+import { compareVersion, nextVersion, awaitTo as to } from 'js-cool'
 import BaseCI from './BaseCi'
 import type { AlipayInstance } from './types.d'
 import { getNpmPkgSync } from './utils/npm'
@@ -144,16 +144,21 @@ export default class AlipayCI extends BaseCI {
 				appId,
 				clientType
 			})
-			const versions = (await this.minidev.minidev.app.getUploadedVersionList({
+			const remoteVersions = (await this.minidev.minidev.app.getUploadedVersionList({
 				appId,
 				clientType,
 				versionStatus: 'RELEASE'
 			})) as unknown as IVersionListResult[]
-			const releaseVersion = versions.length ? versions[0].appVersion : '0.0.0'
-			if (this.version && compareVersion(this.version, releaseVersion) <= 0) {
+			const releaseVersion = remoteVersions.length ? remoteVersions[0].appVersion : '0.0.0'
+			let version = this.version
+
+			// 如果定义了this.version，检验必须大于releaseVersion，如果没传，自动生成nextVersion
+			if (!version) {
+				version = nextVersion(releaseVersion)
+			} else if (compareVersion(version, releaseVersion) <= 0) {
 				printLog(
 					processTypeEnum.ERROR,
-					chalk.red(`上传版本号 "${this.version}" 必须大于生产版本 "${releaseVersion}"`)
+					chalk.red(`上传版本号 "${version}" 必须大于生产版本 "${releaseVersion}"`)
 				)
 			}
 
@@ -168,7 +173,7 @@ export default class AlipayCI extends BaseCI {
 			const result = await this.minidev.minidev.upload({
 				project: this.projectPath,
 				appId,
-				version: this.version,
+				version,
 				clientType,
 				experience,
 				deleteVersion: deleteVersion || lasterVersion // 默认删除上个版本
