@@ -2,11 +2,7 @@
 
 # taro-plugin-mini-ci
 
-Taro 小程序端构建后支持CI（持续集成）的插件，Fork自[@tarojs/plugin-mini-ci](https://github.com/NervJS/taro/tree/v3.6.16/packages/taro-plugin-mini-ci)，针对支付宝小程序CI做了流程优化：
-
-1. 每次上传代码都要输入一个比最近一个版本大的版本号，很鸡肋。`taro-plugin-mini-ci`调整为新版本号只需大于已发布的版本号即可，且上传过程会自动清理已存在的版本号
-2. 支付宝小程序upload有个deleteVersion的选项，这个deleteVersion如果是体验版时不会被删除，`taro-plugin-mini-ci`修复了这个问题
-3. 支付宝小程序CI支持不填入版本号，可自动生成下一个patch版本号。规则详见：[nextVersion](https://github.com/saqqdy/js-cool#nextversion)
+Taro 小程序端构建后支持CI（持续集成）的插件
 
 [![NPM version][npm-image]][npm-url]
 [![Codacy Badge][codacy-image]][codacy-url]
@@ -22,6 +18,12 @@ Taro 小程序端构建后支持CI（持续集成）的插件，Fork自[@tarojs/
 ### **[Documentation](https://www.saqqdy.com/taro-plugin-mini-ci)** • **[Change Log](./CHANGELOG.md)**
 
 </div>
+
+Fork自[@tarojs/plugin-mini-ci](https://github.com/NervJS/taro/tree/v3.6.16/packages/taro-plugin-mini-ci)，针对支付宝小程序CI做了流程优化：
+
+1. 每次上传代码都要输入一个比最近一个版本大的版本号，很鸡肋。`taro-plugin-mini-ci`调整为新版本号只需大于已发布的版本号即可，且上传过程会自动清理已存在的版本号
+2. 支付宝小程序upload有个deleteVersion的选项，这个deleteVersion如果是体验版时不会被删除，`taro-plugin-mini-ci`修复了这个问题
+3. 支付宝小程序CI支持不填入版本号，可自动生成下一个patch版本号。规则详见：[nextVersion](https://github.com/saqqdy/js-cool#nextversion)
 
 ## Installation
 
